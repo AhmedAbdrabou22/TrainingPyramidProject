@@ -1,0 +1,445 @@
+/*General style */
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+h1 , h2 , h3{
+    font-family: 'Poppins', sans-serif;
+    line-height: 70px;
+}
+.fasl{
+    width:100%;
+    height:1px;
+    background-color: white;
+    margin-top:30px;
+}
+
+body{
+    background-color: black;
+    color:white;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bars{
+    display: none;
+}
+
+/*media query */
+
+/*media query*/
+
+.containeer{
+    width:90%;
+    margin:auto;
+}
+:root{
+    --maincolor:#FA9021;
+    --secondcolor:white;
+    --colorone:#B000DC;
+    --colortwo:#DC4200;
+    --colorthree:#00DC8D;
+    --colorfour:#1C140F;
+    --colorfive:#E5E5E5;
+}
+
+/*Style Section Nav*/
+.nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.nav .links ul{
+    list-style-type:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav .links ul li{
+    padding:10px;
+}
+.nav .links ul li a{
+    color:white;
+    text-decoration:none;
+}
+.nav .links ul li:last-child a{
+    padding:5px 8px;
+    background-color: var(--maincolor);
+    color:var(--secondcolor);
+    border-radius: 6px;
+    transition: 0.3s all ease;
+}
+.nav .links ul li:last-child a:hover{
+    background-color:transparent;
+    border: 1px solid var(--maincolor);
+}
+/*End Style nav*/
+
+
+
+/*info game*/
+.content .infoGame{
+    align-items: center;
+    padding-right: 20px;
+}
+.content .infoGame button{
+    width:150px;
+    padding:10px;
+    border-radius: 25px;
+    background-color: var(--maincolor);
+    outline:none;
+    border:none;
+    color:var(--secondcolor);
+    /*background-image: linear-gradient(to right, var(--maincolor) , var(--secondcolor));
+    */transition:.0.3s all ease;
+}
+.content .infoGame p span{
+    color:var(--maincolor)
+}
+.content .infoGame h3{
+    line-height: 50px;
+}
+.content .infoGame p{
+    margin:30px 0;
+    line-height: 30px;
+}
+.content .infoGame button:hover{
+    background-color: transparent;
+    border:1px solid var(--maincolor);
+}
+.header-image{
+    padding:50px 20px;
+    position:relative;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.header-image .counter{
+    position:absolute;
+    left:0%;
+    top:90.5%;
+    padding:5px 0;
+}
+
+
+/*Start section work*/
+.work{
+    margin-top:250px;
+}
+.workAll{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.work .workone , .work .worktwo , .work .workthree{
+    background-color:var(--colorfour);
+    border-radius:20px;
+    padding:30px 20px;
+    margin-top:20px;
+    box-shadow: 0px 4px 94px rgba(0, 0, 0, 0.15);
+}
+.work .workone div , .work .worktwo div , .work .workthree div{
+    width:50%;
+    text-align:center;
+    border-radius:5px;
+    margin-bottom:15px;
+    margin-top:15px;
+    padding: 10px 0;
+} 
+.work .workone h3,.work .worktwo h3 , .work .workthree h3{
+    line-height: 80px;
+}
+.work .workone div{
+    background-color:var(--colorone);
+}
+.work .worktwo div{
+    background-color:var(--colortwo)
+}
+.work .workthree div{
+    background-color:var(--colorthree)
+}
+/*End style section work*/
+
+/*Start style section gameinfo*/
+.gameinfo{
+    background-color: var(--colorfour);
+    margin-top:80px;
+    padding:50px;
+}
+.gameinfo .show{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gameinfo .image .responsive {
+    width: 100%;
+    height: auto;
+}
+/*End style section gameinfo*/
+
+
+/*Start style section team*/
+.team{
+    background-image: linear-gradient(#090909, #180e00);
+    padding:150px 0 ;
+}
+.team h3{
+    padding: 30px;
+}
+.team .flipcards{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;;
+}
+.flip-card {
+    background-color: transparent;
+    width: 270px;
+    height: 270px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+}
+.flip-card-front img , .flip-card-back div{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color:var(--colorfour);
+    color: white;
+}
+
+.flip-card-back {
+    background-color:var(--colorfour);
+    color: white;
+    transform: rotateY(180deg);
+}
+.flip-card-back p {
+    font-size: 25px;
+}
+/*End style section team*/
+
+/*Start style loop*/
+.loop{
+    background: linear-gradient(#180e00, #110600);
+    padding: 50px 0;
+}
+.loop .texloop{
+    margin-top:80px;
+}
+.loop .texloop{
+    background-color: #1C140F;
+    padding:20px 30px;
+    border-radius: 10px;
+}
+.loop .col-4 p:first-child{
+    font-size: 25px;
+    font-weight:bolder;
+}
+.loop .col-8{
+    text-align: center;
+    padding:10px;
+    margin-top:50px;
+}
+.loop .col-8 input{
+    position: relative;
+    border: none;
+    outline:none;
+    width:70%;
+    padding:25px 22px;
+    border-radius: 10px;
+}
+.loop .col-8 button{
+    position:absolute;
+    border:none;
+    outline:none;
+    padding:8px 12px;
+    border-radius:10px;
+    color:var(--secondcolor);
+    background-color: var(--maincolor);
+    right:35%;
+    top:15px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+}
+/*loop style*/
+/*Section footer*/
+.footer{
+    color:white;
+    height:450px;
+    overflow: hidden;
+}
+
+.footer span{
+    color:white;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-left:10px;
+}
+
+.footer ul{
+    list-style: none;
+    margin-left:-25px;
+}
+.footer ul li{
+    margin:10px;
+}
+.footer ul li a{
+    text-decoration: none;
+    color:white;
+    margin-left:10px;
+}
+.footer .quick ul li a{
+    font-size:20px;
+    margin-left:50px ;
+}
+.footer .quick ul li a{
+    transition: 0.3s all ease;
+}
+.footer .quick ul li a:hover{
+    margin-left:25px;
+}
+/*End of style footer*/
+.footer .social{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social div{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color:black;
+    margin:5px;
+    transition:0.3s all ease-in-out
+}
+.footer .social i{
+    font-size:25px;
+    width:40px;
+    height:40px;
+    padding:10px;
+    border-radius: 50%;
+    margin:5px;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.footer .social div:hover{
+    background-color:#FA9021;
+    color:white;
+}
+.lastP{
+    padding-top:30px;
+}
+
+@media (max-width:992px) {
+    .nav .bars{
+        display: block;
+        font-size: 25px;
+        cursor:pointer;
+    }
+    .nav .links ul{
+        position:fixed;
+        top:72px;
+        right:0;
+        flex-direction: column;
+        width:220px;
+        min-height:220px;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: 0.5s transform ease-in-out;
+        z-index:10;
+        box-shadow:0px 5px 15px rgba(0, 0, 0, 0.35);
+    }
+    .nav .links ul.active2{
+        transform: translateX(0);
+        background-color:var(--colorfour);
+        z-index: 1;
+    }
+    .nav .links ul li{
+        margin:0 20px;
+        padding:10px;
+        text-align:center;
+        color:black;
+    }
+    .workAll{
+        flex-direction: column;
+    }
+    .workAll .workone , .workAll .worktwo , .workAll .workthree{
+        width:350px;
+        text-align:center;
+    }
+    .flipcards{
+        flex-direction: column;
+    }
+    .flipcards .flip-card{
+        margin:10px;
+    }
+    .loop .texloop .col-8 input{
+        width:160%;
+    }
+    .loop .texloop .col-8 button{
+        right: -40%;
+        padding:5px;
+    }
+    .header-image{
+        /* background-color: red;
+        position:relative;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        height: 60vh;
+        border: 5px solid transparent;
+    }
+    .header-image .counter{
+        position:absolute;
+        left:0%;
+        top:92.5%;
+        padding:2px 0;
+        width:550px
+    }
+    .footer{
+        text-align: center;
+        color:white;
+        height:750px;
+        overflow: hidden;
+    }
+    .footer .links{
+        margin-top:5px;
+    }
+    .content .infoGame{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        padding-right: 20px;
+    }
+}
