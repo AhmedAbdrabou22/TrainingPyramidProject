@@ -50,3 +50,12 @@ const date = new Date();
 let year = date.getFullYear();
 
 lastP.innerHTML =`Copyright ® ${year} Lorem All rights Rcerved`;
+
+var links = document.querySelectorAll('.links ul li');
+
+// links.forEach((link)=>{
+//     link.addEventListener('click',()=>{
+//         link.classList.remove('active2')
+//     })
+// })
+links[2].classList.add('active2');

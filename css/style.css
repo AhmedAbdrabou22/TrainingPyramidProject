@@ -33,6 +33,11 @@ body{
 .bars{
     display: none;
 }
+.active2{
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    padding:10px;
+}
 .lastP{
     padding-top:30px;
 }
