@@ -1,36 +1,63 @@
-var gallery = document.querySelector('.allGames')
-
-for(var i = 0 ; i < 4 ; i++){
-    let div = `
-    <div class="card" style="width: 15rem;">
-    <img class="card-img-top" src="images/Rectangle 2${i+3}.png" alt="Card image cap">
-    <div class="card-body">
-        <p class="card-text text-center" data-goal="40"><i class="fa-solid fa-fire-flame-curved mx-1"></i> 40 Followers</p>
-    </div>
-</div>
-    `
-    gallery.innerHTML += div;
-}
+var inputs = document.querySelectorAll('.tt');
+inputs.forEach((input)=>{
+    input.addEventListener('focus', () => {
+        input.style.backgroundColor ="#1C140F";
+    })
+});
+inputs.forEach((input)=>{
+    input.addEventListener('blur', () => {
+        input.style.backgroundColor ="rgba(255, 255, 255, 0.07)";
+    })
+});
 
 
-var bars = document.querySelector('.bars')
-var ul = document.querySelector('.nav .links ul')
-bars.addEventListener('click',()=>{
-    ul.classList.toggle('active2')
+
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:5,
+    responsiveClass:true,
+    nav: true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+        }
+    }
 })
-var lastP = document.querySelector('.lastP');
-const date = new Date();
-let year = date.getFullYear();
+});
 
-lastP.innerHTML =`Copyright ® ${year} Lorem All rights Rcerved`;
 
-var links = document.querySelectorAll('.links ul li');
 
-// links.forEach((link)=>{
-//     link.addEventListener('click',()=>{
-//         link.classList.remove('active2')
-//     })
-// })
 
-links[0].classList.add('active2');
+var arr = ['background-image: url("images/Rectangle 6.png");','background-image: url("images/Rectangle 25 (1).png");']
+var buttonLeft = document.querySelector('.js2');
+var buttonRight = document.querySelector('.js3');
+// var image = document.querySelector('.image');
+var num1 = document.getElementById('num1');
+var num2 = document.getElementById('num2');
+
+var image = document.querySelector('.ss');
+buttonRight.addEventListener('click',()=>{
+    image.setAttribute('style',arr[1]);
+    num1.innerText = arr.length
+});
+buttonLeft.addEventListener('click',()=>{
+    image.setAttribute('style',arr[0]);
+    num1.innerText = arr.length-1;
+});
+
+
+
+
+
+
 
